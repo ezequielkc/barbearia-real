@@ -6,21 +6,22 @@ import { Menu, X } from "lucide-react";
 const Header = () => {
   const isMobile = useIsMobile();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const toggleMenu = () => {
     if (!isMenuOpen) {
       setIsMenuOpen(true);
-      setIsAnimating(true);
+      // Pequeno delay para animação de entrada
+      setTimeout(() => setIsVisible(true), 10);
     } else {
-      setIsAnimating(false);
-      setTimeout(() => setIsMenuOpen(false), 300);
+      setIsVisible(false);
+      setTimeout(() => setIsMenuOpen(false), 200);
     }
   };
 
   const closeMenu = () => {
-    setIsAnimating(false);
-    setTimeout(() => setIsMenuOpen(false), 300);
+    setIsVisible(false);
+    setTimeout(() => setIsMenuOpen(false), 200);
   };
 
   // Fechar menu ao pressionar ESC
@@ -33,7 +34,6 @@ const Header = () => {
 
     if (isMenuOpen) {
       document.addEventListener('keydown', handleEscape);
-      // Prevenir scroll do body quando menu está aberto
       document.body.style.overflow = 'hidden';
     }
 
@@ -96,27 +96,26 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay - Só renderiza quando aberto */}
+      {/* Mobile Menu - Renderização condicional simples */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-40">
+        <>
           {/* Backdrop */}
           <div 
-            className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
-              isAnimating ? 'opacity-100' : 'opacity-0'
+            className={`md:hidden fixed inset-0 z-40 bg-black/60 transition-opacity duration-200 ${
+              isVisible ? 'opacity-100' : 'opacity-0'
             }`}
             onClick={closeMenu}
           />
           
           {/* Menu Panel */}
           <div 
-            className={`fixed top-0 right-0 h-full w-80 bg-background border-l border-border shadow-2xl transform transition-transform duration-300 ease-in-out ${
-              isAnimating ? 'translate-x-0' : 'translate-x-full'
+            className={`md:hidden fixed top-0 right-0 z-50 h-full w-80 bg-background border-l border-border shadow-2xl transition-transform duration-200 ${
+              isVisible ? 'translate-x-0' : 'translate-x-full'
             }`}
-            onClick={(e) => e.stopPropagation()}
           >
             <div className="flex flex-col h-full">
-              {/* Mobile Menu Header */}
-              <div className="flex items-center justify-between p-6 border-b border-border">
+              {/* Header */}
+              <div className="flex items-center justify-between p-6 border-b border-border bg-background">
                 <h2 className="text-xl font-jazz font-bold text-primary">
                   Menu
                 </h2>
@@ -129,19 +128,19 @@ const Header = () => {
                 </button>
               </div>
 
-              {/* Mobile Navigation */}
-              <nav className="flex-1 p-6">
+              {/* Navigation */}
+              <nav className="flex-1 p-6 bg-background">
                 <div className="flex flex-col space-y-6">
                   {navItems.map((item, index) => (
                     <a
                       key={item.href}
                       href={item.href}
                       onClick={closeMenu}
-                      className={`text-lg font-medium text-foreground hover:text-primary transition-all duration-300 py-2 border-b border-border/20 ${
-                        isAnimating ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
+                      className={`text-lg font-medium text-foreground hover:text-primary transition-all duration-200 py-2 border-b border-border/20 bg-background ${
+                        isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
                       }`}
                       style={{
-                        transitionDelay: `${index * 100}ms`
+                        transitionDelay: `${index * 50}ms`
                       }}
                     >
                       {item.label}
@@ -150,8 +149,8 @@ const Header = () => {
                 </div>
               </nav>
 
-              {/* Mobile WhatsApp Button */}
-              <div className="p-6 border-t border-border">
+              {/* WhatsApp Button */}
+              <div className="p-6 border-t border-border bg-background">
                 <Button 
                   variant="default" 
                   className="w-full bg-gradient-accent text-vinyl-black font-semibold hover:shadow-jazz transition-all duration-300"
@@ -161,7 +160,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-        </div>
+        </>
       )}
     </header>
   );
