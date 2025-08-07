@@ -86,52 +86,6 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          {/* Horários Detalhados */}
-          <Card className="bg-card border-border hover:shadow-jazz transition-all duration-300 mb-12">
-            <CardHeader>
-              <CardTitle className="text-2xl font-jazz text-primary flex items-center">
-                🕒 Horários de Atendimento
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="text-center p-4 bg-background rounded-lg border border-border">
-                  <h4 className="font-semibold text-foreground mb-2">Segunda-feira</h4>
-                  <p className="text-muted-foreground">09:30–13:00</p>
-                  <p className="text-muted-foreground">13:30–20:00</p>
-                </div>
-                <div className="text-center p-4 bg-background rounded-lg border border-border">
-                  <h4 className="font-semibold text-foreground mb-2">Terça-feira</h4>
-                  <p className="text-muted-foreground">09:30–13:00</p>
-                  <p className="text-muted-foreground">13:30–18:00</p>
-                </div>
-                <div className="text-center p-4 bg-background rounded-lg border border-border">
-                  <h4 className="font-semibold text-foreground mb-2">Quarta-feira</h4>
-                  <p className="text-muted-foreground">09:30–13:00</p>
-                  <p className="text-muted-foreground">13:30–20:00</p>
-                </div>
-                <div className="text-center p-4 bg-background rounded-lg border border-border">
-                  <h4 className="font-semibold text-foreground mb-2">Quinta-feira</h4>
-                  <p className="text-muted-foreground">09:30–13:00</p>
-                  <p className="text-muted-foreground">13:30–20:00</p>
-                </div>
-                <div className="text-center p-4 bg-background rounded-lg border border-border">
-                  <h4 className="font-semibold text-foreground mb-2">Sexta-feira</h4>
-                  <p className="text-muted-foreground">09:30–13:00</p>
-                  <p className="text-muted-foreground">13:30–20:00</p>
-                </div>
-                <div className="text-center p-4 bg-background rounded-lg border border-border">
-                  <h4 className="font-semibold text-foreground mb-2">Sábado</h4>
-                  <p className="text-muted-foreground">09:30–17:00</p>
-                </div>
-                <div className="text-center p-4 bg-background rounded-lg border border-border md:col-span-2 lg:col-span-3">
-                  <h4 className="font-semibold text-foreground mb-2">Domingo</h4>
-                  <p className="text-muted-foreground">Fechado</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
           <Card className="bg-gradient-blues border-border">
             <CardContent className="p-8 text-center">
               <h3 className="text-2xl font-jazz font-bold text-foreground mb-4">

@@ -29,7 +29,16 @@ const Footer = () => {
               * Poker Club: Atividade recreativa entre amigos, sem fins comerciais
             </p>
             <p className="text-xs text-muted-foreground mt-1">
-              Desenvolvido por Ezequiel Kowalski
+              Desenvolvido por{" "}
+              <a
+                href="https://portfolio.ezequielkowalski.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium relative group"
+              >
+                Ezequiel Kowalski
+                <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-foreground/60 transition-all duration-200 group-hover:w-full"></span>
+              </a>
             </p>
           </div>
         </div>

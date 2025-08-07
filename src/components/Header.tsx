@@ -47,6 +47,7 @@ const Header = () => {
     { href: "#barbearia", label: "Barbearia" },
     { href: "#servicos", label: "Serviços" },
     { href: "#poker", label: "Poker Club" },
+    { href: "#chopp", label: "Chopp" },
     { href: "#contato", label: "Contato" },
   ];
 
