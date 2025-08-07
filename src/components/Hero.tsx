@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-left max-w-4xl">
         <div className="max-w-2xl">
           <h1 className="text-5xl md:text-7xl font-jazz font-bold text-foreground mb-6 leading-tight">
-            Blues<span className="text-primary">Shop</span>
+            Barbearia<span className="text-primary">Real</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-light">
             Onde o estilo encontra a música
@@ -31,6 +31,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-gradient-accent text-vinyl-black font-semibold hover:shadow-jazz transition-all duration-300 text-lg px-8 py-6"
+              onClick={() => window.open('https://booksy.com/pt-br/102229_barbearia-real-essencia-das-maos_barbearias_834719_blumenau', '_blank')}
             >
               Agendar Horário
             </Button>

@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section id="contato" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-jazz font-bold text-foreground mb-4">
               Entre em Contato
@@ -44,18 +44,93 @@ const Contact = () => {
               <CardContent>
                 <p className="text-muted-foreground mb-2">
                   <strong>Endereço:</strong><br />
-                  Rua da Música, 123<br />
-                  Bairro Blues<br />
-                  Cidade - Estado
+                  Barbearia Real<br />
+                  Blumenau - SC
                 </p>
                 <p className="text-muted-foreground">
                   <strong>Horário:</strong><br />
-                  Seg-Sex: 9h às 19h<br />
-                  Sáb: 8h às 17h
+                  Seg-Sex: 9h30 às 13h e 13h30 às 20h<br />
+                  Sáb: 9h30 às 17h<br />
+                  Dom: Fechado
                 </p>
               </CardContent>
             </Card>
           </div>
+
+          {/* Mapa do Google */}
+          <Card className="bg-card border-border hover:shadow-jazz transition-all duration-300 mb-12">
+            <CardHeader>
+              <CardTitle className="text-2xl font-jazz text-primary flex items-center">
+                🗺️ Como Chegar
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden shadow-lg">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.8951469929507!2d-49.074982899999995!3d-26.9068226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94df19ee05cc4d91%3A0xb632c404aee9030d!2sBarbearia%20Real!5e0!3m2!1spt-BR!2sbr!4v1754602845316!5m2!1spt-BR!2sbr" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localização da Barbearia Real em Blumenau - SC"
+                  aria-label="Mapa interativo mostrando a localização da Barbearia Real"
+                />
+              </div>
+              <div className="mt-4 text-center">
+                <p className="text-sm text-muted-foreground">
+                  Clique no mapa para abrir no Google Maps
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Horários Detalhados */}
+          <Card className="bg-card border-border hover:shadow-jazz transition-all duration-300 mb-12">
+            <CardHeader>
+              <CardTitle className="text-2xl font-jazz text-primary flex items-center">
+                🕒 Horários de Atendimento
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="text-center p-4 bg-background rounded-lg border border-border">
+                  <h4 className="font-semibold text-foreground mb-2">Segunda-feira</h4>
+                  <p className="text-muted-foreground">09:30–13:00</p>
+                  <p className="text-muted-foreground">13:30–20:00</p>
+                </div>
+                <div className="text-center p-4 bg-background rounded-lg border border-border">
+                  <h4 className="font-semibold text-foreground mb-2">Terça-feira</h4>
+                  <p className="text-muted-foreground">09:30–13:00</p>
+                  <p className="text-muted-foreground">13:30–18:00</p>
+                </div>
+                <div className="text-center p-4 bg-background rounded-lg border border-border">
+                  <h4 className="font-semibold text-foreground mb-2">Quarta-feira</h4>
+                  <p className="text-muted-foreground">09:30–13:00</p>
+                  <p className="text-muted-foreground">13:30–20:00</p>
+                </div>
+                <div className="text-center p-4 bg-background rounded-lg border border-border">
+                  <h4 className="font-semibold text-foreground mb-2">Quinta-feira</h4>
+                  <p className="text-muted-foreground">09:30–13:00</p>
+                  <p className="text-muted-foreground">13:30–20:00</p>
+                </div>
+                <div className="text-center p-4 bg-background rounded-lg border border-border">
+                  <h4 className="font-semibold text-foreground mb-2">Sexta-feira</h4>
+                  <p className="text-muted-foreground">09:30–13:00</p>
+                  <p className="text-muted-foreground">13:30–20:00</p>
+                </div>
+                <div className="text-center p-4 bg-background rounded-lg border border-border">
+                  <h4 className="font-semibold text-foreground mb-2">Sábado</h4>
+                  <p className="text-muted-foreground">09:30–17:00</p>
+                </div>
+                <div className="text-center p-4 bg-background rounded-lg border border-border md:col-span-2 lg:col-span-3">
+                  <h4 className="font-semibold text-foreground mb-2">Domingo</h4>
+                  <p className="text-muted-foreground">Fechado</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
           <Card className="bg-gradient-blues border-border">
             <CardContent className="p-8 text-center">
@@ -75,6 +150,7 @@ const Contact = () => {
                 variant="outline" 
                 size="lg"
                 className="border-foreground text-foreground hover:bg-foreground hover:text-vinyl-black transition-all duration-300"
+                onClick={() => window.open('https://booksy.com/pt-br/102229_barbearia-real-essencia-das-maos_barbearias_834719_blumenau', '_blank')}
               >
                 Consultar Planos
               </Button>
