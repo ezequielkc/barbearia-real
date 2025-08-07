@@ -1,74 +1,90 @@
 # Barbearia Real
 
-## Project info
+Uma barbearia única para apreciadores de rock, blues e jazz.
 
-**URL**: https://lovable.dev/projects/771f9e84-34b5-4c01-9d41-ebc751ba457d
+## Sobre o Projeto
 
-## How can I edit this code?
+Este é o site oficial da Barbearia Real, uma barbearia que oferece uma experiência única combinando serviços de barbearia de qualidade com um ambiente cultural inspirado em música.
 
-There are several ways of editing your application.
+## Tecnologias Utilizadas
 
-**Use Lovable**
+Este projeto foi construído com:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/771f9e84-34b5-4c01-9d41-ebc751ba457d) and start prompting.
+- **Vite** - Build tool e dev server
+- **TypeScript** - Linguagem de programação
+- **React** - Biblioteca JavaScript para interfaces
+- **shadcn/ui** - Componentes de UI
+- **Tailwind CSS** - Framework CSS
 
-Changes made via Lovable will be committed automatically to this repo.
+## Como Executar o Projeto
 
-**Use your preferred IDE**
+### Pré-requisitos
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js (versão 18 ou superior)
+- npm ou yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Instalação
 
-Follow these steps:
+1. Clone o repositório:
+```bash
+git clone <URL_DO_REPOSITORIO>
+cd barbearia-real
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. Instale as dependências:
+```bash
+npm install
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Execute o servidor de desenvolvimento:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Abra [http://localhost:8080](http://localhost:8080) no seu navegador
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Scripts Disponíveis
 
-**Use GitHub Codespaces**
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Gera a build de produção
+- `npm run preview` - Visualiza a build de produção localmente
+- `npm run lint` - Executa o linter
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Estrutura do Projeto
 
-## What technologies are used for this project?
+```
+src/
+├── components/     # Componentes React
+├── pages/         # Páginas da aplicação
+├── hooks/         # Custom hooks
+├── lib/           # Utilitários e configurações
+└── assets/        # Imagens e recursos estáticos
+```
 
-This project is built with:
+## Funcionalidades
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Design Responsivo** - Funciona em desktop e mobile
+- **Tema Musical** - Interface inspirada em rock, blues e jazz
+- **Seções Principais**:
+  - Hero section com chamada principal
+  - Sobre a barbearia
+  - Serviços oferecidos
+  - Poker Club
+  - Contato
 
-## How can I deploy this project?
+## Deploy
 
-Simply open [Lovable](https://lovable.dev/projects/771f9e84-34b5-4c01-9d41-ebc751ba457d) and click on Share -> Publish.
+Para fazer o deploy do projeto:
 
-## Can I connect a custom domain to my Lovable project?
+1. Execute `npm run build`
+2. Os arquivos de produção estarão na pasta `dist/`
+3. Faça o upload dos arquivos para seu servidor web
 
-Yes, you can!
+## Autor
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+**Ezequiel Kowalski** - Desenvolvedor Full Stack
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Licença
+
+Este projeto é privado e pertence à Barbearia Real.
 # barbearia-real
