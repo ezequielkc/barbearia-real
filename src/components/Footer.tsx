@@ -23,10 +23,13 @@ const Footer = () => {
           
           <div className="border-t border-border pt-6">
             <p className="text-sm text-muted-foreground">
-              © 2024 Barbearia Real. Uma experiência única para homens de estilo.
+              © 2025 Barbearia Real. Uma experiência única para homens de estilo.
             </p>
             <p className="text-xs text-muted-foreground mt-2">
               * Poker Club: Atividade recreativa entre amigos, sem fins comerciais
+            </p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Desenvolvido por Ezequiel Kowalski
             </p>
           </div>
         </div>
