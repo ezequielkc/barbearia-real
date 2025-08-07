@@ -1,90 +1,42 @@
 # Barbearia Real
 
-Uma barbearia única para apreciadores de rock, blues e jazz.
+Site oficial da Barbearia Real, uma barbearia em Blumenau que oferece serviços de qualidade em um ambiente inspirado em música.
 
 ## Sobre o Projeto
 
-Este é o site oficial da Barbearia Real, uma barbearia que oferece uma experiência única combinando serviços de barbearia de qualidade com um ambiente cultural inspirado em música.
+Este projeto é o site institucional da Barbearia Real, desenvolvido para apresentar os serviços da barbearia, horários de funcionamento e informações de contato. O site inclui seções para agendamento online, informações sobre o Poker Club e detalhes sobre o chopp artesanal disponível no local.
 
-## Tecnologias Utilizadas
+## Tecnologias
 
-Este projeto foi construído com:
+- React
+- TypeScript
+- Tailwind CSS
+- Vite
+- shadcn/ui
 
-- **Vite** - Build tool e dev server
-- **TypeScript** - Linguagem de programação
-- **React** - Biblioteca JavaScript para interfaces
-- **shadcn/ui** - Componentes de UI
-- **Tailwind CSS** - Framework CSS
+## Desenvolvimento
 
-## Como Executar o Projeto
+Para executar o projeto localmente:
 
-### Pré-requisitos
+1. Instale as dependências com `npm install`
+2. Execute `npm run dev` para iniciar o servidor de desenvolvimento
+3. Acesse http://localhost:8080 no navegador
 
-- Node.js (versão 18 ou superior)
-- npm ou yarn
+## Build
 
-### Instalação
+Para gerar a versão de produção:
 
-1. Clone o repositório:
-```bash
-git clone <URL_DO_REPOSITORIO>
-cd barbearia-real
-```
+- Execute `npm run build`
+- Os arquivos serão gerados na pasta `dist/`
 
-2. Instale as dependências:
-```bash
-npm install
-```
+## Estrutura
 
-3. Execute o servidor de desenvolvimento:
-```bash
-npm run dev
-```
-
-4. Abra [http://localhost:8080](http://localhost:8080) no seu navegador
-
-### Scripts Disponíveis
-
-- `npm run dev` - Inicia o servidor de desenvolvimento
-- `npm run build` - Gera a build de produção
-- `npm run preview` - Visualiza a build de produção localmente
-- `npm run lint` - Executa o linter
-
-## Estrutura do Projeto
-
-```
-src/
-├── components/     # Componentes React
-├── pages/         # Páginas da aplicação
-├── hooks/         # Custom hooks
-├── lib/           # Utilitários e configurações
-└── assets/        # Imagens e recursos estáticos
-```
-
-## Funcionalidades
-
-- **Design Responsivo** - Funciona em desktop e mobile
-- **Tema Musical** - Interface inspirada em rock, blues e jazz
-- **Seções Principais**:
-  - Hero section com chamada principal
-  - Sobre a barbearia
-  - Serviços oferecidos
-  - Poker Club
-  - Contato
+O projeto está organizado em componentes React, com páginas principais e componentes reutilizáveis. A estilização é feita com Tailwind CSS e os componentes de interface utilizam shadcn/ui.
 
 ## Deploy
 
-Para fazer o deploy do projeto:
-
-1. Execute `npm run build`
-2. Os arquivos de produção estarão na pasta `dist/`
-3. Faça o upload dos arquivos para seu servidor web
+O projeto está configurado para deploy na Vercel, com arquivo de configuração `vercel.json` incluído.
 
 ## Autor
 
-**Ezequiel Kowalski** - Desenvolvedor Full Stack
-
-## Licença
-
-Este projeto é privado e pertence à Barbearia Real.
-# barbearia-real
+Ezequiel Kowalski - Desenvolvedor Full Stack
